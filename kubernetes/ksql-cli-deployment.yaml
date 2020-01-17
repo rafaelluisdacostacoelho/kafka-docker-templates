@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Program Files\Kubernetes\kompose.exe convert
+    kompose.version: 1.16.0 (0c01309)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ksql-cli
+  name: ksql-cli
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: ksql-cli
+    spec:
+      containers:
+      - command:
+        - /bin/sh
+        image: confluentinc/cp-ksql-cli:5.4.0
+        name: ksql-cli
+        resources: {}
+        tty: true
+      restartPolicy: Always
+status: {}
