@@ -1,8 +1,6 @@
-# Tiririca
+# Kafka Docker Templates
 
 Kafka Server
-
-![image](./images/tiririca.jpg)
 
 # Overview
 
